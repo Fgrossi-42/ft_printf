@@ -6,11 +6,11 @@
 /*   By: fgrossi <fgrossi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/24 16:14:55 by fgrossi           #+#    #+#             */
-/*   Updated: 2022/02/22 12:16:35 by fgrossi          ###   ########.fr       */
+/*   Updated: 2022/04/29 12:48:57 by fgrossi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../include/ft_printf.h"
 
 static void	ft_digit(uintptr_t nb, char *base)
 {
@@ -28,6 +28,21 @@ static void	ft_digit(uintptr_t nb, char *base)
 	{
 		ft_putchar(base[nb % 16]);
 	}
+}
+
+int	ft_len(uintptr_t n)
+{
+	int	i;
+
+	i = 0;
+	if (n == 0)
+		return (1);
+	while (n > 0)
+	{
+		n = n / 16;
+		i++;
+	}
+	return (i);
 }
 
 unsigned int	ft_puthex(uintptr_t num, char lett)
@@ -54,21 +69,6 @@ unsigned int	ft_puthex(uintptr_t num, char lett)
 		ft_digit(num, base);
 	}
 	return (count);
-}
-
-int	ft_len(uintptr_t n)
-{
-	int	i;
-
-	i = 0;
-	if (n == 0)
-		return (1);
-	while (n > 0)
-	{
-		n = n / 16;
-		i++;
-	}
-	return (i);
 }
 
 int	ft_formats(va_list args, const char format)

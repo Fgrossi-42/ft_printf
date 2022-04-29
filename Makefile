@@ -6,7 +6,7 @@
 #    By: fgrossi <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/02 10:33:00 by fgrossi           #+#    #+#              #
-#    Updated: 2022/02/22 12:17:26 by fgrossi          ###   ########.fr        #
+#    Updated: 2022/04/29 12:46:51 by fgrossi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,8 +17,8 @@ CFLAGS = -Wall -Wextra -Werror
 AR = ar rcs
 RM = rm -f
 
-FILES =	ft_print_tools \
-		ft_printf \
+FILES =	./src/ft_print_tools \
+		./src/ft_printf \
 
 SRCS_DIR = ./
 SRCS = $(addprefix $(SRCS_DIR), $(addsuffix .c, $(FILES)))

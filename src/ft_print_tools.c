@@ -6,11 +6,11 @@
 /*   By: fgrossi <fgrossi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/29 03:50:37 by fgrossi           #+#    #+#             */
-/*   Updated: 2022/02/22 12:16:09 by fgrossi          ###   ########.fr       */
+/*   Updated: 2022/04/29 12:47:15 by fgrossi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../include/ft_printf.h"
 
 int	ft_putchar(int c)
 {
